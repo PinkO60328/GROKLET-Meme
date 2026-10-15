@@ -1,0 +1,58 @@
+:root{--bg:#07061a;--cy:#2ef2ff;--pu:#9b5cff;--pk:#ff5cf0;--tx:#e9f6ff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 20% 0,#2a1060 0,transparent 55%),radial-gradient(ellipse at 90% 40%,#062d4a 0,transparent 50%),var(--bg);color:var(--tx);font-family:Nunito,sans-serif;overflow-x:hidden}
+#stars{position:fixed;inset:0;z-index:-1}
+img{display:block;max-width:100%}
+h1,h2,h3,.brand span{font-family:"Lilita One",cursive;letter-spacing:.5px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.7rem 5vw;background:rgba(7,6,26,.6);backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--cy);text-decoration:none;font-size:1.4rem}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--cy)}
+nav a{color:var(--tx);text-decoration:none;margin-left:1.3rem;font-weight:700;opacity:.8}nav a:hover{opacity:1;color:var(--cy)}
+.hero{padding-top:64px}
+.banner{aspect-ratio:3/1;max-height:420px;width:100%;overflow:hidden;mask-image:linear-gradient(#000 60%,transparent)}
+.banner img{width:100%;height:100%;object-fit:cover}
+.hero-in{display:flex;gap:3rem;align-items:center;max-width:1150px;margin:-120px auto 0;padding:0 5vw;position:relative}
+.hero-logo{flex:0 0 300px;aspect-ratio:456/679;border-radius:28px;overflow:hidden;border:3px solid var(--cy);box-shadow:0 0 40px #2ef2ff88,0 0 90px #9b5cff66}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.float{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-14px) rotate(-1deg)}}
+.tag{color:var(--pk);font-weight:900;letter-spacing:3px}
+h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1}
+.glow{color:var(--cy);text-shadow:0 0 18px var(--cy),0 0 40px var(--pu);animation:gl 2.5s infinite alternate}@keyframes gl{to{text-shadow:0 0 8px var(--cy),0 0 70px var(--pk)}}
+.lead{font-size:1.15rem;margin:1rem 0 1.4rem;max-width:520px;opacity:.9}
+.ca{display:flex;align-items:center;gap:.6rem;background:#ffffff0d;border:1px solid #2ef2ff55;padding:.5rem .6rem .5rem 1rem;border-radius:14px;width:fit-content;max-width:100%;flex-wrap:wrap}
+.ca code{color:var(--cy);font-weight:700;word-break:break-all}
+button,.btn{cursor:pointer;border:2px solid var(--cy);background:transparent;color:var(--tx);padding:.65rem 1.4rem;border-radius:999px;font:900 1rem Nunito;text-decoration:none;transition:.25s;display:inline-block}
+#copy{padding:.35rem 1rem;background:var(--cy);color:#07061a}
+.btn:hover,button:hover{transform:translateY(-3px);box-shadow:0 0 22px var(--cy)}
+.btn.pri{background:linear-gradient(90deg,var(--pu),var(--cy));border-color:transparent}
+.btns{display:flex;gap:1rem;margin-top:1.4rem;flex-wrap:wrap}.center{justify-content:center}
+.marquee{margin:4rem 0 1rem;background:linear-gradient(90deg,var(--pu),var(--cy));color:#07061a;font:1.4rem "Lilita One";overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg)}
+.marquee div{display:inline-block;padding:.6rem 0;animation:mq 22s linear infinite}.marquee div::after{content:attr(data-x)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sec{max-width:1150px;margin:0 auto;padding:5rem 5vw}
+h2{font-size:clamp(2rem,4vw,3rem);color:var(--cy);margin-bottom:1rem;text-shadow:0 0 20px #2ef2ff66}
+.c{text-align:center}.small{opacity:.65;font-size:.95rem;margin-top:.8rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}.two p{margin-bottom:1rem;line-height:1.65}
+.frame{aspect-ratio:16/9;border-radius:24px;overflow:hidden;border:2px solid var(--pu);box-shadow:0 0 50px #9b5cff55}
+.frame img,.tile img{width:100%;height:100%;object-fit:cover}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1rem}
+.card{background:linear-gradient(160deg,#ffffff12,#ffffff03);border:1px solid #2ef2ff44;border-radius:20px;padding:2rem 1rem;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 30px #2ef2ff55}
+.card b{display:block;font:2rem "Lilita One";color:var(--pk);word-break:break-word}.card span{opacity:.75}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1rem}
+.steps li{background:#ffffff0a;border-radius:20px;padding:1.6rem;border:1px solid #9b5cff55}
+.steps i{font:normal 1.4rem "Lilita One";width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--pu);margin-bottom:.8rem;box-shadow:0 0 18px var(--pu)}
+.steps h3{color:var(--cy);margin-bottom:.4rem}.steps p{opacity:.85;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:2rem}
+.tile{aspect-ratio:16/9;border-radius:16px;overflow:hidden;cursor:zoom-in;border:1px solid #2ef2ff33;transition:.35s}
+.tile:hover{transform:scale(1.03) rotate(-.5deg);box-shadow:0 0 30px #2ef2ff77}
+.tile img{transition:.5s}.tile:hover img{transform:scale(1.08)}
+footer{text-align:center;padding:3rem 5vw;border-top:1px solid #ffffff14;opacity:.75;font-size:.9rem}
+footer img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1rem}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:99;cursor:zoom-out;padding:4vw}#lb.on{display:grid}
+#lb img{max-width:100%;max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:12px}
+#toast{position:fixed;bottom:2rem;left:50%;transform:translate(-50%,150%);background:var(--cy);color:#07061a;padding:.6rem 1.4rem;border-radius:999px;font-weight:900;transition:.3s;z-index:100}#toast.on{transform:translate(-50%,0)}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){nav{display:none}.hero-in{flex-direction:column;text-align:center;margin-top:-60px}.hero-logo{flex-basis:auto;width:220px}.ca,.lead{margin-inline:auto}.btns{justify-content:center}.two{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cards,.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
