@@ -56,3 +56,6 @@ footer img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-posi
 @media(max-width:900px){nav{display:none}.hero-in{flex-direction:column;text-align:center;margin-top:-60px}.hero-logo{flex-basis:auto;width:220px}.ca,.lead{margin-inline:auto}.btns{justify-content:center}.two{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.cards,.steps{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.nav>.buy{padding:.5rem 1.2rem;margin-left:1rem;box-shadow:0 0 18px #2ef2ff66;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 30px var(--cy),0 0 50px var(--pu)}}
+.steps+.btns{margin-top:2.2rem}.steps+.btns .btn{font-size:1.15rem;padding:.85rem 2rem}
