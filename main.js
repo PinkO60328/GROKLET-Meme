@@ -1,8 +1,8 @@
 // ===== CONFIG: set the contract address here once known =====
-const CONTRACT_ADDRESS = "0xCommingSoon";
+const CONTRACT_ADDRESS = "0x235aa7b6aa210d9fb812b14aa5707637aa342b9a";
 const X_LINK = "https://x.com/GrokletEthreum";
 document.querySelectorAll('a.xbtn').forEach(a => a.href = X_LINK);
-const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=ethereum";
+const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
 const hasCA = /^0x[a-fA-F0-9]{40}$/.test(CONTRACT_ADDRESS);
 document.getElementById('ca').textContent = CONTRACT_ADDRESS;
 document.querySelectorAll('a.buy').forEach(a => a.href = hasCA ? UNISWAP_BASE + "&outputCurrency=" + CONTRACT_ADDRESS : UNISWAP_BASE);
