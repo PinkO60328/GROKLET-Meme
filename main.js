@@ -1,5 +1,5 @@
 // ===== CONFIG: set the contract address here once known =====
-const CONTRACT_ADDRESS = "0xbc7bbb30759a428282716b008201e718c91561d3";
+const CONTRACT_ADDRESS = "0x05103Ca6440C05AA6DE3679cCa97755Fba4CDBdd";
 const X_LINK = "https://x.com/GrokletonEth";
 document.querySelectorAll('a.xbtn').forEach(a => a.href = X_LINK);
 const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
