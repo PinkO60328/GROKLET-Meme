@@ -1,5 +1,5 @@
 // ===== CONFIG: set the contract address here once known =====
-const CONTRACT_ADDRESS = "0xCommingSoon";
+const CONTRACT_ADDRESS = "0xd6e4631e2326baec39180a6aaa0c408704c31a1d";
 const X_LINK = "https://x.com/Groklet_Eth";
 document.querySelectorAll('a.xbtn').forEach(a => a.href = X_LINK);
 const TG_LINK = "https://t.me/grokletofficialcommunity";
