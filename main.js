@@ -1,8 +1,8 @@
 // ===== CONFIG: set the contract address here once known =====
 const CONTRACT_ADDRESS = "0xCommingSoon";
-const X_LINK = "https://x.com/";
+const X_LINK = "https://x.com/Groklet_Eth";
 document.querySelectorAll('a.xbtn').forEach(a => a.href = X_LINK);
-const TG_LINK = "https://t.me/";
+const TG_LINK = "https://t.me/grokletofficialcommunity";
 document.querySelectorAll('a.tgbtn').forEach(a => a.href = TG_LINK);
 const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
 const hasCA = /^0x[a-fA-F0-9]{40}$/.test(CONTRACT_ADDRESS);
