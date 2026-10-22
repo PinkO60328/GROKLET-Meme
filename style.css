@@ -67,3 +67,20 @@ footer img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-posi
 .nimg{aspect-ratio:2/3;max-height:640px;border-radius:16px;overflow:hidden;border:1px solid #ffffff1a}.nimg img{width:100%;height:100%;object-fit:cover}
 .nlink{display:block;margin-top:10px;color:#1d9bf0;font-weight:700}
 footer .btns{margin-bottom:10px}
+
+.badges{display:flex;gap:.55rem;flex-wrap:wrap;margin:.7rem 0 1rem}
+.badge{font-size:.78rem;font-weight:900;letter-spacing:.6px;padding:.35rem .75rem;border-radius:999px;border:1px solid #2ef2ff66;background:#ffffff10;color:var(--tx)}
+.badge.burn{background:linear-gradient(90deg,#ff5cf033,#ff9a0033);border-color:#ff9a00;color:#ffd28a;box-shadow:0 0 18px #ff9a0055;animation:burnpulse 2.2s ease-in-out infinite}
+@keyframes burnpulse{50%{box-shadow:0 0 28px #ff5cf088,0 0 40px #ff9a0055}}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1150px;margin:2.5rem auto 0;padding:0 5vw}
+.trust-item{display:flex;gap:.8rem;align-items:flex-start;background:linear-gradient(160deg,#ffffff12,#ffffff03);border:1px solid #2ef2ff44;border-radius:16px;padding:1rem 1.1rem}
+.trust-item.hot{border-color:#ff9a00;box-shadow:0 0 24px #ff9a0044;background:linear-gradient(160deg,#ff5cf022,#ff9a0014)}
+.trust-item .ti{font-size:1.35rem;line-height:1}
+.trust-item b{display:block;font:1rem "Lilita One";color:var(--cy);letter-spacing:.3px}
+.trust-item.hot b{color:#ffd28a;text-shadow:0 0 12px #ff9a0088}
+.trust-item small{display:block;opacity:.75;font-size:.82rem;margin-top:.2rem;line-height:1.35}
+.burn-card{border-color:#ff9a00!important;background:linear-gradient(160deg,#ff5cf028,#ff9a0018)!important;box-shadow:0 0 28px #ff9a0044}
+.burn-card b{color:#ffd28a!important;text-shadow:0 0 14px #ff9a0088;font-size:1.7rem}
+.burn-note{color:#ffd28a;opacity:1!important;font-weight:800}
+@media(max-width:900px){.trust{grid-template-columns:1fr 1fr}.badges{justify-content:center}}
+@media(max-width:520px){.trust{grid-template-columns:1fr}}
