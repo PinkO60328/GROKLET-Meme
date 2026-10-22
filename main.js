@@ -7,7 +7,7 @@ document.querySelectorAll('a.tgbtn').forEach(a => a.href = TG_LINK);
 const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
 const hasCA = /^0x[a-fA-F0-9]{40}$/.test(CONTRACT_ADDRESS);
 document.getElementById('ca').textContent = CONTRACT_ADDRESS;
-document.querySelectorAll('a.buy').forEach(a => a.href = hasCA ? UNISWAP_BASE + "&outputCurrency=" + CONTRACT_ADDRESS : "#");
+document.querySelectorAll('a.buy').forEach(a => a.href = hasCA ? UNISWAP_BASE + "&outputCurrency=" + CONTRACT_ADDRESS : UNISWAP_BASE);
 const c=document.getElementById('stars'),x=c.getContext('2d');let s=[];
 function rs(){c.width=innerWidth;c.height=innerHeight;s=Array.from({length:Math.min(220,innerWidth/5)},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.6+.2,v:Math.random()*.3+.05,h:Math.random()<.5?'#2ef2ff':'#d9b8ff'}))}
 rs();addEventListener('resize',rs);
