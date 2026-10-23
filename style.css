@@ -382,6 +382,63 @@ p:last-child { margin-bottom: 0; }
 }
 .reveal.in { opacity: 1; transform: none; }
 
+
+/* TRUST BADGES */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1.75rem;
+}
+.trust-badges.token-trust {
+  margin: 0 0 1.25rem;
+}
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(245, 245, 244, 0.03);
+  color: var(--fg);
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.trust-badge.burn {
+  border-color: rgba(45, 212, 191, 0.45);
+  background: var(--teal-dim);
+  color: var(--teal);
+}
+.trust-badge.renounced {
+  border-color: rgba(245, 245, 244, 0.28);
+  color: var(--fg);
+}
+a.trust-badge.renounced:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--teal-dim);
+}
+
+.stat.highlight {
+  border-color: rgba(45, 212, 191, 0.35);
+  background: linear-gradient(160deg, rgba(45, 212, 191, 0.1), var(--charcoal) 55%);
+}
+.stat.highlight .stat-value {
+  color: var(--teal);
+}
+.stat.highlight .stat-value a {
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.stat.highlight .stat-value a:hover {
+  border-bottom-color: var(--teal);
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }

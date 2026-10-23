@@ -23,7 +23,7 @@ async function copyCA() {
     await navigator.clipboard.writeText(v);
   } catch (e) {}
   if (toast) {
-    toast.textContent = !hasCA ? "Copied! (CA drops at launch)" : "Copied!";
+    toast.textContent = "Copied!";
     toast.classList.add("on");
     setTimeout(() => toast.classList.remove("on"), 1800);
   }
