@@ -417,6 +417,15 @@ p:last-child { margin-bottom: 0; }
   border-color: rgba(245, 245, 244, 0.28);
   color: var(--fg);
 }
+a.trust-badge {
+  text-decoration: none;
+  cursor: pointer;
+}
+a.trust-badge.burn:hover {
+  border-color: var(--teal);
+  background: rgba(45, 212, 191, 0.18);
+  color: var(--teal);
+}
 a.trust-badge.renounced:hover {
   border-color: var(--teal);
   color: var(--teal);
