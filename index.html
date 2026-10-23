@@ -3,179 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GROKLET ($GROKLET) · tiny teal alien on Ethereum</title>
-<meta name="description" content="$GROKLET on Ethereum — a tiny teal alien with a glowing X and 0% tax. Fun meme coin. Not affiliated with xAI or Grok.">
+<title>GROKLET ($GROKLET) · comic alien meme on Ethereum</title>
+<meta name="description" content="$GROKLET on Ethereum — a loud comic alien with a glowing X and 0% tax. Fun meme coin. Not affiliated with xAI or Grok.">
 <meta property="og:title" content="GROKLET ($GROKLET)">
-<meta property="og:description" content="Tiny teal alien. Big vibes. Live on Ethereum.">
+<meta property="og:description" content="Sticker-energy alien. Fat borders. Live on Ethereum.">
 <meta property="og:url" content="https://www.grokletoneth.fun/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.grokletoneth.fun/img/banner.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.grokletoneth.fun/">
-<link rel="icon" href="img/logo.webp">
+<link rel="icon" href="img/logo.webp?v=6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
-<canvas id="stars" aria-hidden="true"></canvas>
-<div class="aurora" aria-hidden="true"></div>
+<div class="paper" aria-hidden="true"></div>
 
-<header class="nav">
-  <a href="#top" class="brand">
-    <span class="brand-mark"><img src="img/logo.webp" alt="" width="40" height="40"></span>
-    <span>GROKLET</span>
-  </a>
-  <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#buy">How to Buy</a>
-    <a href="#gallery">Gallery</a>
-  </nav>
-  <div class="nav-actions">
-    <a class="btn ghost xbtn" href="https://x.com/Groklet_Eth" target="_blank" rel="noopener noreferrer">X</a>
-    <a class="btn pri buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">Buy Now</a>
+<header class="topbar">
+  <a href="#top" class="wordmark">$GROKLET</a>
+  <div class="top-ctas">
+    <a class="sticker buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">BUY</a>
+    <button type="button" class="sticker copy-btn" id="copyTop">COPY CA</button>
+    <a class="sticker xbtn" href="https://x.com/Groklet_Eth" target="_blank" rel="noopener noreferrer">X</a>
+    <a class="sticker tgbtn" href="https://t.me/grokletofficialcommunity" target="_blank" rel="noopener noreferrer">TG</a>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="banner">
+  <section class="hero-banner">
+    <div class="banner-bleed">
       <picture>
-        <source srcset="img/banner.webp?v=4" type="image/webp">
-        <img src="img/banner.jpg?v=4" alt="GROKLET cosmic banner" width="1280" height="720">
+        <source srcset="img/banner.webp?v=6" type="image/webp">
+        <img src="img/banner.jpg?v=6" alt="GROKLET comic banner" width="1280" height="720">
       </picture>
-      <div class="banner-fade"></div>
+      <div class="halftone-overlay" aria-hidden="true"></div>
     </div>
-
-    <div class="hero-in glass">
-      <div class="hero-logo float">
-        <picture>
-          <source srcset="img/logo.webp?v=4" type="image/webp">
-          <img src="img/logo.jpg?v=4" alt="GROKLET" width="456" height="679">
-        </picture>
-      </div>
-      <div class="hero-txt">
-        <p class="tag">$GROKLET <span class="chain">· Ethereum</span></p>
-        <div class="badges">
-          <span class="badge">0% TAX</span>
-          <span class="badge">1B SUPPLY</span>
-          <span class="badge">ETH</span>
-        </div>
-        <h1>Small alien.<br><span class="glow">Cosmic energy.</span></h1>
-        <p class="lead">He crash-landed, scanned the timeline, and decided to stay. Teal ears. Glowing X. Zero chill. Pure meme vibes.</p>
-        <div class="ca">
-          <span class="chip">ETH</span>
-          <span class="ca-label">CA</span>
-          <code id="ca">0xCommingSoon</code>
-          <button type="button" id="copy">Copy</button>
-        </div>
-        <div class="btns">
-          <a class="btn pri buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
-          <a class="btn" href="#buy">How to buy</a>
-          <a class="btn xbtn" href="https://x.com/Groklet_Eth" target="_blank" rel="noopener noreferrer">Follow on X</a>
-          <a class="btn tgbtn" href="https://t.me/grokletofficialcommunity" target="_blank" rel="noopener noreferrer">Telegram</a>
-        </div>
-      </div>
+    <div class="logo-sticker">
+      <picture>
+        <source srcset="img/logo.webp?v=6" type="image/webp">
+        <img src="img/logo.jpg?v=6" alt="GROKLET" width="456" height="679">
+      </picture>
     </div>
   </section>
 
-  <div class="trust" aria-label="Trust signals">
-    <div class="trust-item glass">
-      <span class="ti">💎</span>
-      <div><b>1B Supply</b><small>Fixed. No mint.</small></div>
-    </div>
-    <div class="trust-item glass">
-      <span class="ti">🚫</span>
-      <div><b>0% Tax</b><small>Buy &amp; sell clean</small></div>
-    </div>
-    <div class="trust-item glass">
-      <span class="ti">⛓️</span>
-      <div><b>Ethereum</b><small>Mainnet only</small></div>
-    </div>
-  </div>
+  <section class="headline-block">
+    <p class="tagline">ETH MEME · 0% TAX · 1B SUPPLY</p>
+    <h1>$GROKLET</h1>
+    <p class="subhead">Tiny alien. Fat stickers. Zero chill.</p>
+    <p class="lead">He crash-landed with a glowing X on his forehead and refused to leave. Comic panels only. Pure meme vibes.</p>
 
-  <div class="marquee" aria-hidden="true"><div>$GROKLET ✦ BEAM ME UP ✦ X MARKS THE BRAIN ✦ TINY BUT GALACTIC ✦ $GROKLET ✦ BEAM ME UP ✦ X MARKS THE BRAIN ✦ TINY BUT GALACTIC ✦ </div></div>
-
-  <section id="about" class="sec two">
-    <div class="frame reveal">
-      <picture>
-        <source srcset="img/g1.webp?v=4" type="image/webp">
-        <img src="img/g1.jpg?v=4" alt="GROKLET" loading="lazy" width="1024" height="1024">
-      </picture>
+    <div class="action-grid">
+      <a class="fat buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">BUY ON UNISWAP</a>
+      <button type="button" class="fat copy-btn" id="copy">COPY CA</button>
+      <a class="fat xbtn" href="https://x.com/Groklet_Eth" target="_blank" rel="noopener noreferrer">FOLLOW ON X</a>
+      <a class="fat tgbtn" href="https://t.me/grokletofficialcommunity" target="_blank" rel="noopener noreferrer">TELEGRAM</a>
     </div>
-    <div class="reveal about-copy">
-      <p class="eyebrow">About</p>
-      <h2>Who's this guy?</h2>
-      <p>GROKLET is a pocket-sized space elf from somewhere past the edge of the map. Pointy ears. Big eyes. A cyan X on his forehead that lights up every time he understands something — which is constantly.</p>
+
+    <div class="ca-ticket">
+      <span class="ticket-label">CONTRACT</span>
+      <code id="ca">0xCommingSoon</code>
+      <button type="button" class="ticket-copy copy-btn" id="copyCa">COPY</button>
+    </div>
+  </section>
+
+  <div class="zigzag" aria-hidden="true"></div>
+
+  <section id="about" class="sec about-news">
+    <div class="news-col reveal">
+      <p class="eyebrow">WHO'S THIS GUY?</p>
+      <h2>Pocket-sized space elf. Loud energy.</h2>
+      <p>GROKLET is a sticker-sized alien from past the edge of the map. Pointy ears. Big eyes. A neon X that lights up every time he gets the joke — which is constantly.</p>
       <p>No fourteen-phase roadmap. Just vibes, memes, and showing up. A cute little alien and a community that thinks he's the best thing to fall out of the sky this cycle.</p>
-      <p class="small">Fun meme coin on Ethereum. Not financial advice. Not affiliated with xAI, Grok, or Vitalik. He's literally an elf.</p>
+      <p class="disclaimer">Fun meme coin on Ethereum. Not financial advice. Not affiliated with xAI, Grok, or Vitalik. He's literally an elf.</p>
+    </div>
+    <div class="tilt-sticker reveal">
+      <picture>
+        <source srcset="img/logo.webp?v=6" type="image/webp">
+        <img src="img/logo.jpg?v=6" alt="GROKLET sticker" width="456" height="679">
+      </picture>
+      <span class="sticker-cap">OFFICIAL CUTIE</span>
     </div>
   </section>
 
   <section id="tokenomics" class="sec">
-    <p class="eyebrow c reveal">Economics</p>
-    <h2 class="c reveal">Tokenomics</h2>
-    <div class="cards">
-      <div class="card glass reveal"><b>1B</b><span>Total Supply · 1,000,000,000</span></div>
-      <div class="card glass reveal"><b>0%</b><span>Tax. Zero. None.</span></div>
-      <div class="card glass reveal"><b>ETH</b><span>Ethereum Mainnet</span></div>
-      <div class="card glass reveal"><b>$GROKLET</b><span>Ticker · Ethereum</span></div>
+    <p class="eyebrow c">THE NUMBERS</p>
+    <h2 class="c">Tokenomics</h2>
+    <div class="scroll-cards">
+      <article class="comic-card reveal"><b>1B</b><span>Total Supply · 1,000,000,000</span></article>
+      <article class="comic-card lime reveal"><b>0%</b><span>Tax. Zero. None.</span></article>
+      <article class="comic-card pink reveal"><b>ETH</b><span>Ethereum Mainnet</span></article>
+      <article class="comic-card yellow reveal"><b>$GROKLET</b><span>Ticker · Ethereum</span></article>
     </div>
-    <p class="c small">More details drop at launch. Watch the sky.</p>
   </section>
 
   <section id="buy" class="sec">
-    <p class="eyebrow c reveal">Get in</p>
-    <h2 class="c reveal">How to buy</h2>
-    <ol class="steps">
-      <li class="glass reveal"><i>1</i><h3>Get a wallet</h3><p>Grab an Ethereum wallet like MetaMask or Rabby. Write the seed phrase down — on paper, not in your notes app.</p></li>
-      <li class="glass reveal"><i>2</i><h3>Load it up</h3><p>Buy some ETH and send it to your wallet on Ethereum mainnet. Keep a little extra for gas.</p></li>
-      <li class="glass reveal"><i>3</i><h3>Swap for $GROKLET</h3><p>Open Uniswap on Ethereum, paste the contract address, and swap ETH for $GROKLET. Check it twice.</p></li>
-      <li class="glass reveal"><i>4</i><h3>Welcome aboard</h3><p>You're crew now. Post the elf. Feed the timeline.</p></li>
+    <p class="eyebrow c">GET IN</p>
+    <h2 class="c">How to buy</h2>
+    <ol class="howto">
+      <li class="reveal"><i>1</i><div><h3>Get a wallet</h3><p>Grab MetaMask or Rabby. Seed phrase on paper — not in your notes app.</p></div></li>
+      <li class="reveal"><i>2</i><div><h3>Load it up</h3><p>Buy ETH, send it to your wallet on mainnet. Keep a little for gas.</p></div></li>
+      <li class="reveal"><i>3</i><div><h3>Swap for $GROKLET</h3><p>Open Uniswap, paste the CA, swap ETH for $GROKLET. Check it twice.</p></div></li>
+      <li class="reveal"><i>4</i><div><h3>Welcome aboard</h3><p>You're crew now. Post the elf. Feed the timeline.</p></div></li>
     </ol>
-    <div class="btns center">
-      <a class="btn pri buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">Buy Now on Uniswap</a>
+    <div class="center-row">
+      <a class="fat buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">BUY NOW</a>
     </div>
   </section>
 
   <section id="gallery" class="sec">
-    <p class="eyebrow c reveal">Gallery</p>
-    <h2 class="c reveal">Field photos</h2>
-    <p class="c small">Spotted across the galaxy. Tap to zoom.</p>
-    <div class="grid">
-      <figure class="tile reveal"><picture><source srcset="img/g1.webp?v=4" type="image/webp"><img src="img/g1.jpg?v=4" alt="GROKLET art 1" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g2.webp?v=4" type="image/webp"><img src="img/g2.jpg?v=4" alt="GROKLET art 2" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g3.webp?v=4" type="image/webp"><img src="img/g3.jpg?v=4" alt="GROKLET art 3" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g4.webp?v=4" type="image/webp"><img src="img/g4.jpg?v=4" alt="GROKLET art 4" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g5.webp?v=4" type="image/webp"><img src="img/g5.jpg?v=4" alt="GROKLET art 5" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g6.webp?v=4" type="image/webp"><img src="img/g6.jpg?v=4" alt="GROKLET art 6" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g7.webp?v=4" type="image/webp"><img src="img/g7.jpg?v=4" alt="GROKLET art 7" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g8.webp?v=4" type="image/webp"><img src="img/g8.jpg?v=4" alt="GROKLET art 8" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g9.webp?v=4" type="image/webp"><img src="img/g9.jpg?v=4" alt="GROKLET art 9" loading="lazy" width="1024" height="1024"></picture></figure>
-      <figure class="tile reveal"><picture><source srcset="img/g10.webp?v=4" type="image/webp"><img src="img/g10.jpg?v=4" alt="GROKLET art 10" loading="lazy" width="1024" height="1024"></picture></figure>
+    <p class="eyebrow c">FIELD PHOTOS</p>
+    <h2 class="c">Comic panels</h2>
+    <p class="c mute">Spotted across the galaxy. Tap to zoom.</p>
+    <div class="comic-grid">
+      <figure class="panel tall t1 reveal"><picture><source srcset="img/g1.webp?v=6" type="image/webp"><img src="img/g1.jpg?v=6" alt="GROKLET art 1" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel t2 reveal"><picture><source srcset="img/g2.webp?v=6" type="image/webp"><img src="img/g2.jpg?v=6" alt="GROKLET art 2" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel wide t3 reveal"><picture><source srcset="img/g3.webp?v=6" type="image/webp"><img src="img/g3.jpg?v=6" alt="GROKLET art 3" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel t4 reveal"><picture><source srcset="img/g4.webp?v=6" type="image/webp"><img src="img/g4.jpg?v=6" alt="GROKLET art 4" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel tall t5 reveal"><picture><source srcset="img/g5.webp?v=6" type="image/webp"><img src="img/g5.jpg?v=6" alt="GROKLET art 5" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel t6 reveal"><picture><source srcset="img/g6.webp?v=6" type="image/webp"><img src="img/g6.jpg?v=6" alt="GROKLET art 6" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel wide t7 reveal"><picture><source srcset="img/g7.webp?v=6" type="image/webp"><img src="img/g7.jpg?v=6" alt="GROKLET art 7" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel t8 reveal"><picture><source srcset="img/g8.webp?v=6" type="image/webp"><img src="img/g8.jpg?v=6" alt="GROKLET art 8" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel tall t9 reveal"><picture><source srcset="img/g9.webp?v=6" type="image/webp"><img src="img/g9.jpg?v=6" alt="GROKLET art 9" loading="lazy" width="1024" height="1024"></picture></figure>
+      <figure class="panel t10 reveal"><picture><source srcset="img/g10.webp?v=6" type="image/webp"><img src="img/g10.jpg?v=6" alt="GROKLET art 10" loading="lazy" width="1024" height="1024"></picture></figure>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="footer-brand">
-    <span class="brand-mark"><img src="img/logo.webp" alt="" width="56" height="56"></span>
-    <b>GROKLET</b>
-  </div>
-  <div class="btns center footer-links">
-    <a class="btn xbtn" href="https://x.com/Groklet_Eth" target="_blank" rel="noopener noreferrer">X</a>
-    <a class="btn tgbtn" href="https://t.me/grokletofficialcommunity" target="_blank" rel="noopener noreferrer">Telegram</a>
-    <a class="btn buy" href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" rel="noopener noreferrer">Buy</a>
-  </div>
-  <p>© 2026 $GROKLET on Ethereum · Fun meme coin · NFA</p>
-  <p class="small">Not affiliated with xAI, Grok, or Vitalik. Community meme project.</p>
+<footer class="foot">
+  <b>$GROKLET</b>
+  <p>© 2026 on Ethereum · Fun meme coin · NFA</p>
+  <p class="disclaimer">Not affiliated with xAI, Grok, or Vitalik. Community meme project.</p>
 </footer>
 
 <div id="lb" role="dialog" aria-modal="true"><img alt=""></div>
 <div id="toast">Copied!</div>
-<script src="main.js?v=5"></script>
+<script src="main.js?v=6"></script>
 </body>
 </html>
