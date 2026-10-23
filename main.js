@@ -1,31 +1,38 @@
-// ===== CONFIG: set the contract address here once known =====
+// ===== CONFIG =====
 const CONTRACT_ADDRESS = "0xCommingSoon";
 const X_LINK = "https://x.com/Groklet_Eth";
-document.querySelectorAll("a.xbtn").forEach((a) => (a.href = X_LINK));
 const TG_LINK = "https://t.me/grokletofficialcommunity";
-document.querySelectorAll("a.tgbtn").forEach((a) => (a.href = TG_LINK));
+const SOCIAL_LINK = "https://x.com/grok/status/2110471512679395342";
 const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
+
+document.querySelectorAll("a.xbtn").forEach((a) => (a.href = X_LINK));
+document.querySelectorAll("a.tgbtn").forEach((a) => (a.href = TG_LINK));
+document.querySelectorAll("a.social").forEach((a) => (a.href = SOCIAL_LINK));
+
 const hasCA = /^0x[a-fA-F0-9]{40}$/.test(CONTRACT_ADDRESS);
-document.getElementById("ca").textContent = CONTRACT_ADDRESS;
+const caEl = document.getElementById("ca");
+if (caEl) caEl.textContent = CONTRACT_ADDRESS;
 document.querySelectorAll("a.buy").forEach(
   (a) => (a.href = hasCA ? UNISWAP_BASE + "&outputCurrency=" + CONTRACT_ADDRESS : UNISWAP_BASE)
 );
 
-const t = document.getElementById("toast");
+const toast = document.getElementById("toast");
 async function copyCA() {
-  const v = document.getElementById("ca").textContent.trim();
+  const v = (caEl && caEl.textContent.trim()) || CONTRACT_ADDRESS;
   try {
     await navigator.clipboard.writeText(v);
   } catch (e) {}
-  t.textContent = !hasCA ? "Copied! (CA drops at launch)" : "Copied!";
-  t.classList.add("on");
-  setTimeout(() => t.classList.remove("on"), 1800);
+  if (toast) {
+    toast.textContent = !hasCA ? "Copied! (CA drops at launch)" : "Copied!";
+    toast.classList.add("on");
+    setTimeout(() => toast.classList.remove("on"), 1800);
+  }
 }
 document.querySelectorAll(".copy-btn").forEach((btn) => (btn.onclick = copyCA));
 
 const io = new IntersectionObserver(
-  (e) =>
-    e.forEach((i) => {
+  (entries) =>
+    entries.forEach((i) => {
       if (i.isIntersecting) {
         i.target.classList.add("in");
         io.unobserve(i.target);
@@ -33,15 +40,21 @@ const io = new IntersectionObserver(
     }),
   { threshold: 0.12 }
 );
-document.querySelectorAll(".reveal").forEach((e) => io.observe(e));
+document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
 const lb = document.getElementById("lb");
-const li = lb.querySelector("img");
-document.querySelectorAll(".panel img").forEach(
-  (i) =>
-    (i.onclick = () => {
-      li.src = i.currentSrc || i.src;
+if (lb) {
+  const li = lb.querySelector("img");
+  document.querySelectorAll(".gallery-grid img").forEach((img) => {
+    img.onclick = () => {
+      li.src = img.currentSrc || img.src;
+      li.alt = img.alt || "";
+      lb.hidden = false;
       lb.classList.add("on");
-    })
-);
-lb.onclick = () => lb.classList.remove("on");
+    };
+  });
+  lb.onclick = () => {
+    lb.classList.remove("on");
+    lb.hidden = true;
+  };
+}
