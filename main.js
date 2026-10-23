@@ -1,6 +1,6 @@
 // ===== CONFIG =====
 const CONTRACT_ADDRESS = "0xCommingSoon";
-const X_LINK = "https://x.com/Groklet_Eth";
+const X_LINK = "https://x.com/GrokletOnE";
 const TG_LINK = "https://t.me/grokletofficialcommunity";
 const SOCIAL_LINK = "https://x.com/grok/status/2110471512679395342";
 const UNISWAP_BASE = "https://app.uniswap.org/swap?chain=mainnet";
