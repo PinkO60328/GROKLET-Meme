@@ -1,5 +1,5 @@
 // ===== CONFIG =====
-const CONTRACT_ADDRESS = "0xCommingSoon";
+const CONTRACT_ADDRESS = "0x656bd1d70e24de09744b89ea0de468d831af5f55";
 const X_LINK = "https://x.com/GrokletOnE";
 const TG_LINK = "https://t.me/grokletcommunity";
 const SOCIAL_LINK = "https://x.com/grok/status/2110471512679395342";
